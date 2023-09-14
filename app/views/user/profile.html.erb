@@ -1,0 +1,19 @@
+
+<div>
+<%= link_to 'アカウント','/user/account' %>
+<%= link_to 'プロフィール','/user/profile' %>
+</div>
+
+<% if @user.avatar.attached? %>
+  <%= image_tag @user.avatar %>
+<% end %>
+
+
+名前
+<%= @user.name %>
+
+自己紹介
+<%= @user.profile %>
+
+<%= link_to 'プロフィール編集','/user/profile/edit' %>
+</div>
