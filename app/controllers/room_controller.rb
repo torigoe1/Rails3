@@ -50,9 +50,10 @@ class RoomController < ApplicationController
   def search
     @user = current_user
     @room = Room.where("address like ?", "%#{params[:area]}%")
+    
     if params[:keyword].present?
-    @room = Room.where(['introducce LIKE(?) OR name LIKE(?)', "%#{params[:keyword]}%","%#{params[:keyword]}%"])
-    end  
+      @room = Room.where(['introduce LIKE(?) OR name LIKE(?)', "%#{params[:keyword]}%","%#{params[:keyword]}%"])
+    end 
   end
 
   private

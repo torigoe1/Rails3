@@ -1,9 +1,9 @@
-<%= form_with model:@room, url: room_search_path, local:true, method: :get  do |s| %>
-    <%= s.label :area %><br/>
-    <%= s.search_field :area %>
-    <%= s.label :keyword %><br/>
-    <%= s.search_field :keyword %>
-    <%= s.submit "検索" %>
+<%= form_with  url: room_search_path, local:true, method: :get  do |r| %>
+    <%= r.label :area %><br/>
+    <%= r.text_field :area %>
+    <%= r.label :keyword %><br/>
+    <%= r.text_field :keyword %>
+    <%= r.submit "検索" %>
 <% end %>
 
 <% if @room != nil %>

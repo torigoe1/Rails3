@@ -1,9 +1,8 @@
-<h1>Room#index</h1>
-<%= form_with model:@room, url: room_search_path, local:true, method: :get  do |r| %>
+<%= form_with url: room_search_path, local:true, method: :get  do |r| %>
     <%= r.label :area %><br/>
     <%= r.search_field :area %>
-
+    <%= r.label :keyword %><br/>
+    <%= r.search_field :keyword %>
     <%= r.submit "検索" %>
 <% end %>
 
-<p>Find me in app/views/room/index.html.erb</p>

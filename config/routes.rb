@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'room/new'
   post 'room/create'
   get 'room/search'
-  post 'room/search'
   get 'room/own'
   get 'room/:id',to:'room#show'
   get 'room/:id/edit',to:'room#edit'
