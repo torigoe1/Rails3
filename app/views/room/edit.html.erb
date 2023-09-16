@@ -1,30 +1,30 @@
-新規登録
-<%= form_with model:@room, url: room_create_path, local:true  do |f| %>
+施設情報の編集
+<%= form_with model:@room, url: {controller: 'room', action: 'update'}, local:true  do |f| %>
 
     
     <div class="field">
       <%= f.label :name %><br/>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, value: @room.name %>
     </div>
   
     <div class="field">
       <%= f.label :introduce %><br/>
-      <%= f.text_area :introduce %>
+      <%= f.text_area :introduce, value: @room.introduce %>
     </div>
 
     <div class="field">
     <%= f.label :price %><br/>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, value: @room.price %>
     </div>
 
     <div class="field">
     <%= f.label :address %><br/>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, value: @room.address %>
     </div>
 
     <div class="field">
     <%= f.label :image_name %><br/>
-    <%= f.file_field :image_name %>
+    <%= f.file_field :image_name, value: @room.image_name %>
     </div>
   
     <div class="actions">

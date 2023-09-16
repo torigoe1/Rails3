@@ -1,9 +1,17 @@
 <h1>User#index</h1>
-<%= @user.email %>
 
 <div>
 <%= link_to 'アカウント','/user/account' %>
 <%= link_to 'プロフィール','/user/profile' %>
+</div>
+
+<div>
+    メールアドレス
+    <%= @user.email %>
+</div>
+<div>
+    パスワード
+    *********
 </div>
 
 <%= link_to 'アカウント編集','/users/edit' %>

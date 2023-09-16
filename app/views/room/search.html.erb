@@ -1,0 +1,18 @@
+<%= form_with model:@room, url: room_search_path, local:true, method: :get  do |s| %>
+    <%= s.label :area %><br/>
+    <%= s.search_field :area %>
+    <%= s.label :keyword %><br/>
+    <%= s.search_field :keyword %>
+    <%= s.submit "検索" %>
+<% end %>
+
+<% if @room != nil %>
+    <% @room.each do |r| %>
+        <%= image_tag r.image_name %>
+        <%= r.name %>
+        <%= r.address %>
+        <%= r.introduce %>
+        <%= r.price %>
+        <%= link_to("詳細はこちら","/room/#{r.id}")%>
+    <% end %>
+<% end %>

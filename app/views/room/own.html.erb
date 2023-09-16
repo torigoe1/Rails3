@@ -1,0 +1,7 @@
+登録済み一覧
+<% @room.each do |r| %>
+    <%= image_tag r.image_name %>
+    <%= r.address %>
+    <%= r.introduce %>
+    <%= r.price %>
+<% end %>

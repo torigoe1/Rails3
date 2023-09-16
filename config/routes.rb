@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   get '/',to:'room#index'
   get 'room/new'
   post 'room/create'
+  get 'room/search'
+  post 'room/search'
+  get 'room/own'
+  get 'room/:id',to:'room#show'
+  get 'room/:id/edit',to:'room#edit'
+  patch 'room/:id/update',to:'room#update'
+  
 
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

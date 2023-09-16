@@ -4,10 +4,10 @@
 <%= link_to 'プロフィール','/user/profile' %>
 </div>
 
+アイコン画像
 <% if @user.avatar.attached? %>
   <%= image_tag @user.avatar %>
 <% end %>
-
 
 名前
 <%= @user.name %>
