@@ -9,7 +9,7 @@
 <%= @room.address %>
 <%= @room.introduce %>
 
-<%= form_with model:@reservation, url: reservation_create_path, local:true  do |f| %>
+<%= form_with model:@reservation, url: reservation_confirm_path, local:true  do |f| %>
 
     
     <div class="field">
@@ -27,6 +27,8 @@
     <%= f.text_field :people %>
     </div>
 
+    <%= f.hidden_field :room_id, :value => @room.id %>
+    <%= f.hidden_field :user_id, :value => @user.id %>
   
     <div class="actions">
       <%= f.submit "予約" %>

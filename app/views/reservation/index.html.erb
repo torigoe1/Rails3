@@ -1,0 +1,21 @@
+予約済み一覧
+<tr>
+    <th>画像</th>
+    <th>施設名</th>
+    <th>紹介文</th>
+    <th>合計料金</th>
+    <th>チェックイン</th>
+    <th>チェックアウト</th>
+    <th>予約確定日時</th>
+</tr>
+<% @reservation.each do |r| %>
+    <tr>
+        <td><%= image_tag r.room.image_name %></td>
+        <td><%= r.room.name %></td>
+        <td><%= r.room.introduce %></td>
+        <td><%= r.total_price %>
+        <td><%= r.start_date %></td>
+        <td><%= r.end_date %></td>
+        <td><%= r.created_at %></td>
+    </tr>
+<% end %>

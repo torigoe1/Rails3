@@ -23,6 +23,7 @@ class RoomController < ApplicationController
   def show
     @user = current_user
     @room = Room.find_by(id:params[:id])
+    @reservation = Reservation.new
   end
 
   def edit

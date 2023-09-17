@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get 'room/:id/edit',to:'room#edit'
   patch 'room/:id/update',to:'room#update'
   
+  get 'reservation/index'
+  post 'reservation/confirm'
+  post 'reservation/create'
 
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :name, presence: true
   has_one_attached :avatar
 
-  has_many :reservation
-  has_many :room
+  has_many :reservation, dependent: :destroy
+  has_many :room, dependent: :destroy
 end
