@@ -18,6 +18,10 @@ end
 def confirm
     @user = current_user
     @reservation = Reservation.new(reservation_params)
+
+    if @reservation.invalid?
+        redirect_to "/room/#{@reservation.room_id}", flash: { error: @reservation.errors.full_messages }
+    end
 end
 
 

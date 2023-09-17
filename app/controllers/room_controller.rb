@@ -10,14 +10,18 @@ class RoomController < ApplicationController
   end
 
   def create
+    @user = current_user
     @room = Room.new(room_params)
     @room.user_id = current_user.id
     if @room.image_name == nil
       @room.image_name = "default-image.png"
     end
 
-    @room.save
-    redirect_to "/"
+    if @room.save
+      redirect_to "/"
+    else
+      render action: :new
+    end
   end
 
   def show

@@ -10,6 +10,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <% if flash[:error].present? %>
+    <% flash[:error].each do |e| %>
+      <%= e %>
+    <% end %>
+  <% end %>
+
   <body>
   <%= link_to 'ホーム','/' %>
   <% if user_signed_in? %>

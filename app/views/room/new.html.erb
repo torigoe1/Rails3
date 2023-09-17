@@ -1,4 +1,13 @@
 新規登録
+<% if @room.errors.any? %>
+    <% @room.errors.full_messages.each do |message| %>
+        <div class="error_message">
+        <%= message %>
+        </div>
+    <% end %>
+<% end %>
+
+
 <%= form_with model:@room, url: room_create_path, local:true  do |f| %>
 
     
