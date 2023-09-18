@@ -6,6 +6,6 @@ class Room < ApplicationRecord
     has_many :reservation, dependent: :destroy
     belongs_to :user
 
-
+    mount_uploader :image_name, ImageNameUploader
 
 end

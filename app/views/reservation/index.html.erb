@@ -14,7 +14,7 @@
     <% @reservation.each do |r| %>
         <div class="contain_reservation_index">
         <tr>
-            <td><%= image_tag r.room.image_name, style: "width: 200px; height: auto;" %></td>
+            <td><%= image_tag r.room.image_name.url, style: "width: 200px; height: auto;" %></td>
             <td><%= r.room.name %></td>
             <td><%= r.room.introduce %></td>
             <td><%= r.total_price %>

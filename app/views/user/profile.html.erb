@@ -10,6 +10,8 @@
     アイコン画像</br>
     <% if @user.avatar.attached? %>
       <%= image_tag @user.avatar,style: "border-radius: 50%; width: 80px; height: 80px; object-fit:cover;" %></br>
+    <% else %>
+      <%= image_tag '/default-avatar.png' %></br>
     <% end %>
     名前 </br>
     <%= @user.name %></br>

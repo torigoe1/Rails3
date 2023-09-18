@@ -14,7 +14,7 @@
     <% @room.each do |r| %>
         <div class="information">
             <div class="room_image">
-                <%= image_tag r.image_name, style: "width: 300px; height: auto;" %>
+                <%= image_tag r.image_name.url, style: "width: 300px; height: auto;" %>
             </div>
             <div class="contain_room">
                 <%= r.name %></br>

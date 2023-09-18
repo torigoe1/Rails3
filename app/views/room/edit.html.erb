@@ -31,7 +31,7 @@
 
     <div class="field">
     <%= f.label :image_name, "画像" %><br/>
-    <%= f.file_field :image_name, value: @room.image_name %>
+    <%= f.file_field :image_name, id: :image_name, value: @room.image_name %>
     </div>
   
     <div class="actions">
