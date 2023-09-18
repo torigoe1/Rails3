@@ -1,15 +1,14 @@
-
-
-予約内容の確認
-チェックイン
-<%= @reservation.start_date %>
-チェックアウト
-<%= @reservation.end_date %>
-人数
-<%= @reservation.people %>
-お支払い金額
-
-
+<h2>予約内容の確認</h2>
+<div class="main_reservation">
+    チェックイン
+    <%= @reservation.start_date.strftime('%Y/%m/%d') %></br>
+    チェックアウト
+    <%= @reservation.end_date.strftime('%Y/%m/%d') %></br>
+    人数
+    <%= @reservation.people %>人</br>
+    お支払い金額
+    ¥<%= @reservation.total_price %>
+</div>
 <%= form_with model:@reservation, url: reservation_create_path, local:true  do |f| %>    
     <div class="field">
         <%= f.hidden_field :room_id %>
@@ -17,7 +16,9 @@
         <%= f.hidden_field :start_date %>
         <%= f.hidden_field :end_date %>
         <%= f.hidden_field :people %>
-        <%= f.submit "予約" %>
+        <%= f.submit "予約を確定" %>
     </div>
-    
   <% end %>
+  <div class="cancel_reservation">
+    <%= link_to "キャンセル",:back %>
+  </div>

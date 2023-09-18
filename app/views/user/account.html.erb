@@ -1,18 +1,22 @@
-<h1>User#index</h1>
+<div class="top_account">
+設定
+</div>
+<div class="account">
+    <div class="contain_account">
+        <%= link_to 'アカウント','/user/account' %></br>
+        <%= link_to 'プロフィール','/user/profile' %>
+    </div>
+    <div class="main_account">
+        <div>
+            メールアドレス
+            <%= @user.email %>
+        </div>
+        <div>
+            パスワード
+            *********
+        </div>
 
-<div>
-<%= link_to 'アカウント','/user/account' %>
-<%= link_to 'プロフィール','/user/profile' %>
+        <%= link_to 'アカウント編集','/users/edit' %>
+    </div>
 </div>
 
-<div>
-    メールアドレス
-    <%= @user.email %>
-</div>
-<div>
-    パスワード
-    *********
-</div>
-
-<%= link_to 'アカウント編集','/users/edit' %>
-<p>Find me in app/views/user/index.html.erb</p>

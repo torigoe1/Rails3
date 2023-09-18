@@ -10,7 +10,7 @@ class Reservation < ApplicationRecord
   def date_check
       if self.start_date != nil && self.end_date != nil
           if self.start_date > self.end_date
-          errors.add(:end_date,"は開始日より前の日付は登録できません")
+          errors.add(:end_date,"はチェックインより前の日付は登録できません")
           end
       end
   end

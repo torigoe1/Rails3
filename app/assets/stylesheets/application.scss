@@ -10,6 +10,130 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-@import "bootstrap-sprockets";
-@import "bootstrap";
  */
+
+@import "bootstrap";
+.top_image{
+    width:40%
+}
+
+header {
+    background-color: #ff9800;
+}
+h2 {
+    text-align: center;
+}
+.field {
+    text-align: center;
+}
+.actions{
+    text-align: center;
+}
+.follow {
+    text-align: center;
+}
+
+.main_index{
+    width:100%;
+}
+
+.potepan_index {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+}
+
+.search_index {
+    display:block;
+    text-align: center;
+}
+.search_4 {
+    display:block;
+    text-align: center;
+    margin-top:30px;
+}
+
+.top_account{
+    font-size: 30px;
+    margin-left: 30px;
+}
+.contain_account{
+    border: 1px, solid, black;
+    font-size: 16px;
+}
+.account{
+    display:flex;
+    justify-content: space-between;
+    width:30%;
+    margin-left: 30px;
+}
+
+.top_profile{
+    font-size: 30px;
+    margin-left: 30px;
+}
+.contain_profile{
+    border: 1px, solid, black;
+    font-size: 16px;
+}
+.profile{
+    display:flex;
+    justify-content: space-between;
+    width:30%;
+    margin-left: 30px;
+}
+
+.search {
+    text-align: center;
+    margin-top: 30px;
+}
+.information{
+    display: inline-block;
+    width:300px;
+    margin:30px;
+}
+.contain_room{
+    display: block;
+}
+
+.top_room_show{
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.main_room_show{
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.field_show{
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.actions_show{
+    margin-top: 30px;
+    margin-left: 200px;
+}
+.main_reservation{
+    text-align: center;
+    margin:20px 0px;
+}
+.cancel_reservation{
+    text-align: center;   
+}
+table{
+    margin-left: 30px;
+}
+.show_reservation{
+    text-align: center;
+}
+.room_number{
+    margin-left: 50px;
+}

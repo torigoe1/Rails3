@@ -41,6 +41,8 @@ class RoomController < ApplicationController
     @room = Room.find_by(id:params[:id])
    if @room.update(room_params)
     redirect_to "/room/#{@room.id}"
+   else
+    render action: :edit
    end
   end
 
