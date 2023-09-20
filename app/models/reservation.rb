@@ -5,7 +5,7 @@ class Reservation < ApplicationRecord
   validates :start_date, {presence:true}
   validates :end_date, {presence:true}
   validate :date_check
-  validates :people, {length:{minimum:1}}
+  validates :people, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 1}
 
   def date_check
       if self.start_date != nil && self.end_date != nil
