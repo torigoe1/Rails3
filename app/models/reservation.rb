@@ -5,6 +5,7 @@ class Reservation < ApplicationRecord
   validates :start_date, {presence:true}
   validates :end_date, {presence:true}
   validate :date_check
+  validate :start_date_check
   validates :people, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 1}
 
   def date_check
@@ -14,6 +15,15 @@ class Reservation < ApplicationRecord
           end
       end
   end
+
+  def start_date_check
+    if self.start_date != nil 
+        if self.start_date < Date.today
+        errors.add(:start_date,"は過去の日付は登録できません")
+        end
+    end
+end
+
 
   def total_day
     total_day = (end_date - start_date).to_i
