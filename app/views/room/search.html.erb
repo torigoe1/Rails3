@@ -1,0 +1,28 @@
+<div class ="search">
+    <%= form_with  url: room_search_path, local:true, method: :get  do |r| %>
+        <%= r.label :area, "エリア名を入力" %>
+        <%= r.text_field :area %>
+        <%= r.label :keyword, "キーワード名を入力" %>
+        <%= r.text_field :keyword %>
+        <%= r.submit "検索" %>
+    <% end %>
+</div>
+<div class="room_number">
+    <%= @room.length %>件が見つかりました。
+</div>
+<% if @room != nil %>
+    <% @room.each do |r| %>
+        <div class="information">
+            <div class="room_image">
+                <%= image_tag r.image_name.url, style: "width: 300px; height: auto;" %>
+            </div>
+            <div class="contain_room">
+                <%= r.name %></br>
+                <%= r.address %></br>
+                <%= r.introduce %></br>
+                <%= r.price %></br>
+                <%= link_to("詳細はこちら","/room/#{r.id}")%>
+            </div>
+        </div>
+    <% end %>
+<% end %>

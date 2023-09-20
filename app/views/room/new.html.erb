@@ -1,0 +1,43 @@
+<h2>新規登録</h2>
+<% if @room.errors.any? %>
+    <% @room.errors.full_messages.each do |message| %>
+        <div class="error_message">
+        <%= message %>
+        </div>
+    <% end %>
+<% end %>
+
+
+<%= form_with model:@room, url: room_create_path, local:true  do |f| %>
+
+    
+    <div class="field">
+      <%= f.label :name, "施設名" %><br/>
+      <%= f.text_field :name %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :introduce, "紹介文" %><br/>
+      <%= f.text_area :introduce %>
+    </div>
+
+    <div class="field">
+    <%= f.label :price, "料金" %><br/>
+    <%= f.text_field :price %>
+    </div>
+
+    <div class="field">
+    <%= f.label :address, "住所" %><br/>
+    <%= f.text_field :address %>
+    </div>
+
+    <div class="field">
+    <%= f.label :image_name, "画像" %><br/>
+    <%= f.file_field :image_name %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "保存" %>
+    </div>
+    
+  <% end %>

@@ -1,0 +1,35 @@
+<div class = "main_index">
+    <div class = "potepan_index" >
+        Potepan Sheareで</br>
+        まだ体験したことのない</br>
+        旅をしよう
+    </div>
+    <div class = "search_index">
+        <%= form_with url: room_search_path, local:true, method: :get  do |r| %>
+            <%= r.search_field :area, value: "エリア名を入力" %>
+            <%= r.submit "検索" %>
+        <% end %>
+    </div>
+</div>
+<div class = search_4>
+    <div>        
+        <%= form_with url: room_search_path, local:true, method: :get  do |r| %>
+            <%= r.hidden_field :area, :value => "東京" %>
+            <%= r.submit "東京エリアを検索" %>
+        <% end %>        
+        <%= form_with url: room_search_path, local:true, method: :get  do |r| %>
+            <%= r.hidden_field :area, :value => "大阪" %>
+            <%= r.submit "大阪エリアを検索" %>
+        <% end %>
+    </div>
+    <div>
+        <%= form_with url: room_search_path, local:true, method: :get  do |r| %>
+            <%= r.hidden_field :area, :value => "京都" %>
+            <%= r.submit "京都エリアを検索" %>  
+        <% end %>
+        <%= form_with url: room_search_path, local:true, method: :get  do |r| %>
+            <%= r.hidden_field :area, :value => "札幌" %>
+            <%= r.submit "札幌エリアを検索" %>
+        <% end %>
+    </div>
+</div>

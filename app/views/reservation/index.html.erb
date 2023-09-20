@@ -1,0 +1,27 @@
+<h2>予約済み一覧</h2>
+<table>
+    <div class="reservation_index_top">
+        <tr>
+            <th>画像</th>
+            <th>施設名</th>
+            <th>紹介文</th>
+            <th>合計料金</th>
+            <th>チェックイン</th>
+            <th>チェックアウト</th>
+            <th>予約確定日時</th>
+        </tr>
+    </div>
+    <% @reservation.each do |r| %>
+        <div class="contain_reservation_index">
+        <tr>
+            <td><%= image_tag r.room.image_name.url, style: "width: 200px; height: auto;" %></td>
+            <td><%= r.room.name %></td>
+            <td><%= r.room.introduce %></td>
+            <td><%= r.total_price %>
+            <td><%= r.start_date.strftime('%Y/%m/%d') %></td>
+            <td><%= r.end_date.strftime('%Y/%m/%d') %></td>
+            <td><%= r.created_at.strftime('%Y/%m/%d') %></td>
+        </tr>
+        </div>
+    <% end %>
+</table>

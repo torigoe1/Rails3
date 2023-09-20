@@ -1,0 +1,25 @@
+ja:
+  helpers:
+    label:
+      user:
+        name: ユーザー名
+
+  activerecord:
+    attributes:
+      reservation:
+        name: 施設名
+        introduce: 施設詳細
+        price: 料金
+        address: 住所
+        start_date: チェックイン
+        end_date: チェックアウト
+        people: 人数
+ 
+      room:
+        name: 施設名
+        introduce: 施設詳細
+        price: 料金
+        address: 住所
+        start_date: チェックイン
+        end_date: チェックアウト
+        people: 人数
